@@ -56,6 +56,9 @@ export async function render_data(processed_data) {
                 <span class="col period">修正期間: ${item.firstDate.month}月${item.firstDate.day}日 ~ ${item.lastDate.month}月${item.lastDate.day}日</span>
                 <span class="col count">修正回数: ${item.range.length}</span>   
             </a>
+            <a href="https://kabutan.jp/stock/news?code=${item.companyCode}" target="_blank" rel="noopener noreferrer" class="ir-link">
+                最新ニュース
+            </a>
         `;
 
         resultDiv.appendChild(container);
