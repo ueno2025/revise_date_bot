@@ -72,3 +72,20 @@
     color: inherit;
     text-decoration: none;
 }
+
+.ir-link {
+    margin-left: 16px;              /* 本体リンクとの間に少し余白 */
+    padding: 6px 12px;
+    background-color: #f0f0f0;      /* 控えめな灰色背景 */
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #0078d4;                 /* 青系でクリックを示唆 */
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ir-link:hover {
+    background-color: #e0e0e0;
+    color: #005a9e;
+}
