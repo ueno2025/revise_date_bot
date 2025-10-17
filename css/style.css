@@ -73,19 +73,30 @@
     text-decoration: none;
 }
 
-/* ニュースボタン */
+/* ニュースボタン（基本スタイル） */
 .ir-link {
-    margin-left: 16px;              /* 本体リンクとの間に少し余白 */
+    margin-left: 16px;
     padding: 6px 12px;
-    background-color: #f0f0f0;      /* 控えめな灰色背景 */
     border-radius: 6px;
     font-size: 0.9rem;
-    color: #0078d4;                 /* 青系でクリックを示唆 */
     text-decoration: none;
     white-space: nowrap;
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* 白背景（odd）→ グレー系ボタン */
+.company:nth-child(odd) .ir-link {
+    background-color: #f0f0f0;
+    color: #0078d4;
+}
+
+/* グレー背景（even）→ 白ボタン */
+.company:nth-child(even) .ir-link {
+    background-color: #ffffff;
+    color: #0078d4;
+}
+
+/* hover時の効果 */
 .ir-link:hover {
     background-color: #e0e0e0;
     color: #005a9e;
