@@ -65,7 +65,7 @@
     text-align: center;
 }
 
-/*<a>タグの部分*/
+/* <a>タグの部分 */
 .company-link {
     display: flex;
     width: 100%;
@@ -73,6 +73,7 @@
     text-decoration: none;
 }
 
+/* ニュースボタン */
 .ir-link {
     margin-left: 16px;              /* 本体リンクとの間に少し余白 */
     padding: 6px 12px;
@@ -88,4 +89,51 @@
 .ir-link:hover {
     background-color: #e0e0e0;
     color: #005a9e;
+}
+
+/* ==============================
+   スマホ対応（レスポンシブ対応）
+   ============================== */
+@media screen and (max-width: 600px) {
+
+    /* カードを縦配置に */
+    .company {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 95%; /* 少し広げて余白確保 */
+    }
+
+    /* aタグ内の配置も縦に */
+    .company-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* 各列を折り返し許可＆見やすく */
+    .col {
+        padding: 4px 0;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+    }
+
+    /* コード名は少し大きく */
+    .col.code-name {
+        font-size: 1rem;
+    }
+
+    /* 期間と回数を少し間隔を取る */
+    .col.period,
+    .col.count {
+        margin-top: 4px;
+        font-size: 0.9rem;
+    }
+
+    /* ニュースボタンを下に */
+    .ir-link {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
 }
