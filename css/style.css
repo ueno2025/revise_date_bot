@@ -65,6 +65,13 @@
     text-align: center;
 }
 
+/* かっこの部分を少し小さく＆薄めに */
+#h1 .sub-text {
+    font-size: 0.7em;
+    margin-left: 6px;
+}
+
+
 /* <a>タグの部分 */
 .company-link {
     display: flex;
@@ -106,6 +113,12 @@
    スマホ対応（レスポンシブ対応）
    ============================== */
 @media screen and (max-width: 600px) {
+    #h1 .sub-text {
+        display: block;   /* 改行 */
+        margin-left: 0;   /* 左の余白をリセット */
+        margin-top: 4px;  /* 上に少し余白を足す */
+        font-size: 0.7em;
+    }
 
     /* カードを縦配置に */
     .company {
